@@ -16,7 +16,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-
         TextView artist;
         TextView album;
         TextView genre;
@@ -29,14 +28,14 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            this.artist = (TextView) itemView.findViewById(R.id.artist);
-            this.album = (TextView) itemView.findViewById(R.id.album);
-            this.genre = (TextView) itemView.findViewById(R.id.genre);
-            this.year = (TextView) itemView.findViewById(R.id.year);
-            this.rate = (TextView) itemView.findViewById(R.id.rate);
-            this.have = (TextView) itemView.findViewById(R.id.have);
-            this.users = (TextView) itemView.findViewById(R.id.users);
-            this.image = (ImageView) itemView.findViewById(R.id.image);
+            this.artist = itemView.findViewById(R.id.artist);
+            this.album = itemView.findViewById(R.id.album);
+            this.genre = itemView.findViewById(R.id.genre);
+            this.year = itemView.findViewById(R.id.year);
+            this.rate = itemView.findViewById(R.id.rate);
+            this.have = itemView.findViewById(R.id.have);
+            this.users = itemView.findViewById(R.id.users);
+            this.image = itemView.findViewById(R.id.image);
         }
     }
 
@@ -49,7 +48,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                                            int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.card_layout, parent, false);
-
 
 
         MyViewHolder myViewHolder = new MyViewHolder(view);
@@ -67,9 +65,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         TextView have = holder.have;
         TextView users = holder.users;
         ImageView image = holder.image;
-
-
-
 
         artist.setText(dataSet.get(listPosition).getArtist());
         album.setText(dataSet.get(listPosition).getAlbum());

@@ -9,9 +9,10 @@ public class DataModel {
     String rate;
     String have;
     String users;
-    String image;
+    Integer image;
 
-    public DataModel(String artist, String album, String genre, String year, String rate, String have, String users, String image) {
+    public DataModel(String artist, String album, String genre, String year, String rate,
+                     String have, String users, Integer image) {
         this.artist = artist;
         this.album = album;
         this.genre = genre;
@@ -50,7 +51,7 @@ public class DataModel {
         return users;
     }
 
-    public String getImage() {
+    public Integer getImage() {
         return image;
     }
 }

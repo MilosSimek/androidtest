@@ -73,7 +73,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         rate.setText(dataSet.get(listPosition).getRate());
         have.setText(dataSet.get(listPosition).getHave());
         users.setText(dataSet.get(listPosition).getUsers());
-        //image.setImageResource(dataSet.get(listPosition).getImage());
+        image.setImageResource(dataSet.get(listPosition).getImage());
     }
 
     @Override

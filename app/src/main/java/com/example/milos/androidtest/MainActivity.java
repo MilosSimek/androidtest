@@ -42,5 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     MyData.images[i]
             ));
         }
+        adapter = new CustomAdapter(data);
+        recyclerView.setAdapter(adapter);
     }
 }
